@@ -120,9 +120,14 @@ def p_assignment_operator(p):
 
 
 def p_matrix_function(p):
-    """matrix_function : EYE '(' INTNUM ')'
-                       | ONES '(' INTNUM ')'
-                       | ZEROS '(' INTNUM ')' """
+    """matrix_function : function_name '(' INTNUM ')' """
+
+
+def p_function_name(p):
+    """function_name : EYE
+                     | ONES
+                     | ZEROS """
+
 
 def p_matrix(p):
     """matrix : '[' vectors ']' """
